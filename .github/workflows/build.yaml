@@ -44,8 +44,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            PG_MAJOR=11
-            PGVECTOR_TAG=v0.5.1
+            PG_MAJOR=14
+            PGVECTOR_TAG=v0.8.0
 
   image-dockerhub:
     runs-on: ubuntu-20.04
@@ -78,5 +78,5 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            PG_MAJOR=11
-            PGVECTOR_TAG=v0.5.1
+            PG_MAJOR=14
+            PGVECTOR_TAG=v0.8.0
