@@ -2,7 +2,6 @@ ARG PGVECTOR_TAG=v0.6.2
 ARG PG_MAJOR=11
 FROM bitnami/git:2.44.0 AS git
 
-11.6.7
 
 ARG PGVECTOR_TAG
 WORKDIR /workspace
