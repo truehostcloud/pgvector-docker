@@ -44,7 +44,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            PG_MAJOR=14.4.0-debian-11-r0
+            PG_MAJOR=14.4.0
             PGVECTOR_TAG=v0.8.0
 
   # image-dockerhub:
