@@ -1,5 +1,5 @@
 ARG PGVECTOR_TAG=v0.8.0
-ARG PG_MAJOR=16.1.0
+ARG PG_MAJOR=16.3.0
 FROM bitnami/git:2.44.0 AS git
 
 
@@ -8,7 +8,7 @@ WORKDIR /workspace
 RUN git clone https://github.com/pgvector/pgvector && cd pgvector && git checkout ${PGVECTOR_TAG}
 
 ARG PG_MAJOR
-FROM bitnami/postgresql:${PG_MAJOR}-debian-11-r0
+FROM bitnami/postgresql:${PG_MAJOR}
 
 USER root
 COPY --from=git /workspace/pgvector /tmp/pgvector
