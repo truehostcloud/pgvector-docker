@@ -74,11 +74,11 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ env.REGISTRY_DOCKERHUB }}/${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:16.3.0
+          tags: ${{ env.REGISTRY_DOCKERHUB }}/${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:15.2.0
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            PG_MAJOR=16.3.0
+            PG_MAJOR=15.2.0
             PGVECTOR_TAG=v0.8.0

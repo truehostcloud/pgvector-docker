@@ -1,5 +1,5 @@
 ARG PGVECTOR_TAG=v0.8.0
-ARG PG_MAJOR=16.3.0
+ARG PG_MAJOR=15.2.0
 FROM bitnami/git:2.44.0 AS git
 
 
